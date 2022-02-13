@@ -29,11 +29,11 @@ function listItems() {
   for ( let eachItem of basket ) {
     console.log( `Item's in the basket are ${eachItem}` );
   } // End of for of loop
+  return `All items logged`;
 } // End of listItems
 
-// listItems();
-
 console.log( `log test listItemss`, listItems() );
+// listItems(); commentted out as to not add items again
 
 // Create a function called empty
 listItems();
@@ -43,6 +43,8 @@ function empty() {
     console.log( `Items remaining in basket`, basket );
     basket.pop(basket);
   }
+  return 'Removed all items';
 }
 
+console.log( `log test empty function`, empty() );
 empty();
