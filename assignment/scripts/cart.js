@@ -46,8 +46,8 @@ function empty() {
 }
 
 // comment out the next 2 lines to test functions below
-//console.log( `log test empty function`, empty() );
-//empty();
+// console.log( `log test empty function`, empty() );
+// empty();
 
 
 // Stretch Goals
@@ -81,3 +81,22 @@ console.log( 'log test of true addItem jersey', addItem( `jersey` ) );
 // addItem( `jersey` ); commented out as not to add duplicate items
 console.log( 'log test of false addItem baseball', addItem( `baseball` ) );
 // addItem( `baseball` ); commented out as not to add duplicate items
+
+// create a function called removeItem
+function removeItem( item ){
+  let itemExist = basket.includes( item );
+  let index = basket.indexOf( item );
+  console.log( `Index of ${item}`, index );
+  if ( itemExist ) {
+      basket.splice(index, 1)
+      console.log( `Removed ${item} from Basket` );
+  } // End IF
+  else {
+    console.log( `${item} does not exist in Basket` );
+  } // End else
+} // End removeItem
+
+console.log( `log test of removeItem that exist`, removeItem( `jersey` ) );
+//removeItem( `jersey` );
+console.log( `log test of removeItem that DOES NOT exist`, removeItem( `soccer ball` ) );
+//removeItem( `Soccer Ball` );
