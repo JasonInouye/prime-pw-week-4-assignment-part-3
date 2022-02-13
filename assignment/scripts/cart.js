@@ -19,7 +19,7 @@ addItem( `Socks` );
 addItem( `Shoes` );
 addItem( `Football` );
 
-console.log( `log function test Helmet`, addItem( `Helmet` ) );
+console.log( `log function test of addItem Helmet`, addItem( `Helmet` ) );
 
 
 // Create a function called listItems
