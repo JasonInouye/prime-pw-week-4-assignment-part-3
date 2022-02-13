@@ -18,7 +18,7 @@ function addItem( addtobasket ){
 addItem( `Socks` );
 addItem( `Shoes` );
 addItem( `Football` );
-addItem( `Jersey` );
+//addItem( `Jersey` );
 
 console.log( `log function test Helmet`, addItem( `Helmet` ) );
 
@@ -46,28 +46,39 @@ function empty() {
   return 'Removed all items';
 }
 
+// comment out the next 2 lines to test functions below
 //console.log( `log test empty function`, empty() );
 //empty();
 
 
 // Stretch Goals
 
-// add a const variable
-
-const maxItems = 5;
-console.log( `Max Items set to ${maxItems}` );
-
+// add a const variable maxItems
 // create function isFull.
-// return false if < maxItems True otherwise
-function isFull() {
-  if ( basket.length < maxItems ) {
-    console.log( `inside the if isFull function`);
-    return false;
-  } // End If
-  else {
-    return true;
-  } //End Else
-} // End isFull
 
-isFull();
-console.log( `log test isFull`, isFull() );
+function addItem( addtobasket ){
+  const maxItems = 5;
+  console.log( `Max Items set to ${maxItems}` );
+  console.log( `inside addtobasket`);
+  isFull();
+    function isFull() {
+      if ( basket.length < maxItems ) {
+        console.log( `inside the if isFull function` );
+        basket.push( addtobasket );
+        // if an item was added to the array return true
+        console.log( `True, ${addtobasket} has been added to basket` );
+        return false; // return false if the basket contains less than max number of items.
+      } // End If
+      else {
+        // if there was no room and the item could not be added return false
+        console.log( `False, Basket is full ${addtobasket} has not been added to basket!!` );
+        return true; // return true otherwise (equal or more than maxitems)
+      } // End else
+    } // End isFull
+} // End addtobasket
+
+addItem( `jersey` );
+
+addItem( `Helmet` );
+
+addItem( `Baseball` );
