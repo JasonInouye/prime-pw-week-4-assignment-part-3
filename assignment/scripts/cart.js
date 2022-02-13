@@ -93,6 +93,7 @@ function removeItem( item ){
   } // End IF
   else {
     console.log( `${item} does not exist in Basket` );
+    return null;
   } // End else
 } // End removeItem
 
