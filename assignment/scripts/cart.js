@@ -46,5 +46,28 @@ function empty() {
   return 'Removed all items';
 }
 
-console.log( `log test empty function`, empty() );
-empty();
+//console.log( `log test empty function`, empty() );
+//empty();
+
+
+// Stretch Goals
+
+// add a const variable
+
+const maxItems = 5;
+console.log( `Max Items set to ${maxItems}` );
+
+// create function isFull.
+// return false if < maxItems True otherwise
+function isFull() {
+  if ( basket.length < maxItems ) {
+    console.log( `inside the if isFull function`);
+    return false;
+  } // End If
+  else {
+    return true;
+  } //End Else
+} // End isFull
+
+isFull();
+console.log( `log test isFull`, isFull() );
