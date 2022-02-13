@@ -18,7 +18,6 @@ function addItem( addtobasket ){
 addItem( `Socks` );
 addItem( `Shoes` );
 addItem( `Football` );
-//addItem( `Jersey` );
 
 console.log( `log function test Helmet`, addItem( `Helmet` ) );
 
@@ -77,8 +76,8 @@ function addItem( addtobasket ){
     } // End isFull
 } // End addtobasket
 
-addItem( `jersey` );
 
-addItem( `Helmet` );
-
-addItem( `Baseball` );
+console.log( 'log test of true addItem jersey', addItem( `jersey` ) );
+// addItem( `jersey` ); commented out as not to add duplicate items
+console.log( 'log test of false addItem baseball', addItem( `baseball` ) );
+// addItem( `baseball` ); commented out as not to add duplicate items
